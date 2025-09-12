@@ -1,0 +1,27 @@
+.file-grid {
+  display: grid;
+  gap: 20px;
+}
+
+.file-grid.grid-view {
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
+
+.file-grid.list-view {
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+.no-files {
+  text-align: center;
+  padding: 40px;
+  color: #5f6368;
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .file-grid.grid-view {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 15px;
+  }
+}

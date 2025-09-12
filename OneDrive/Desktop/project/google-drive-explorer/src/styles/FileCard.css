@@ -1,0 +1,94 @@
+.file-card {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 15px;
+  background-color: white;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.file-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-color: #4285f4;
+}
+
+.file-card.grid-view {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.file-card.list-view {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.file-icon {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.file-card.list-view .file-icon {
+  margin-bottom: 0;
+  font-size: 2rem;
+}
+
+.file-info {
+  flex: 1;
+}
+
+.file-name {
+  margin: 0 0 8px 0;
+  font-size: 1rem;
+  color: #202124;
+  word-break: break-word;
+}
+
+.file-author {
+  margin: 0 0 5px 0;
+  font-size: 0.85rem;
+  color: #5f6368;
+}
+
+.file-size, .file-date {
+  margin: 2px 0;
+  font-size: 0.8rem;
+  color: #5f6368;
+}
+
+.file-tags {
+  margin-top: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.tag {
+  background-color: #e8f0fe;
+  color: #1a73e8;
+  padding: 3px 8px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+}
+
+.tag-more {
+  background-color: #f1f3f4;
+  color: #5f6368;
+  padding: 3px 8px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+}
+
+@media (max-width: 768px) {
+  .file-card.list-view {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+  
+  .file-card.list-view .file-icon {
+    margin-bottom: 5px;
+  }
+}
